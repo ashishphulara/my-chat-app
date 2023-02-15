@@ -7,25 +7,59 @@
     align-items: center;  
 }
 .joinContainer{
-    border: 3px solid black;
-    height: 50%;
-    width: 50%;
+    width: 40%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.joinContainer > img {
-    width : 10vw;
+.joinContainer > img{
+    width : 10vmax;
+    margin-top: 1rem;
 }
 
 .joinContainer > h1{
     color: aliceblue;
-    font-size: xx-large;
-    font-family: "julee";
-    width: 30vmax;
+    font-size: 2.5vmax;
+    width: 20vmax;
     border-bottom: 0.2vmax solid white;
     text-align: center;
+    font-family: "julee";
+    box-sizing: border-box;
+    
 }
 
+.joinContainer > input {
+    height: 5vh;
+    width: 20vw;
+    border-radius: 5px;
+}
 
+#joinInput{
+    width: 30vmax;
+    outline: none;
+    border: none;
+    margin: 2vmax;
+    font-size: 1.2vmax;
+    box-sizing: border-box;
+}
 
+.joinBtn{
+    height: 2rem;
+    width: 20vw;
+    border-radius: 5px;
+    margin-top: 7px;
+    border: none;
+    margin: 2vmax;
+    font-size: 1.2vmax;
+    box-sizing: border-box;
+    background-color: teal;
+    color: aliceblue;
+    font-family:"julee";
+    font-size: x-large;
+}
+
+.joinBtn:hover{
+    background-color: rgb(2, 59, 59);
+    transition: all 0.2s ;
+    cursor:pointer;
+}

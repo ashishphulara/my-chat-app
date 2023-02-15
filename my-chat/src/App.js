@@ -2,8 +2,8 @@
 import './App.css';
 import  {BrowserRouter as Router ,Routes , Route} from "react-router-dom";
 import Join from "./component/join/Join"
+import Chat from "./component/chat/Chat"
 
-const ENDPOINT = "http://localhost:8081/";
 
 function App() {
 
@@ -13,7 +13,7 @@ function App() {
       <Router>
         <Routes>
           <Route exact path='/' element={<Join />}/>
-          <Route path='/chat' />
+          <Route path='/chat' element={<Chat />}/>
         </Routes>
       </Router>
     </div>
