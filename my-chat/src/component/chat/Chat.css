@@ -32,9 +32,8 @@
 
 #chatInput{
     width:81%;
-    padding: 2px;
     border: none;
-    padding: 2vmax;
+    padding: 1vmax;
     background-color: aliceblue;
     outline: none;
     font-size: 1.2vmax;
