@@ -20,16 +20,15 @@
 .joinContainer > h1{
     color: aliceblue;
     font-size: 2.5vmax;
-    width: 20vmax;
+    width: 10vmax;
     border-bottom: 0.2vmax solid white;
     text-align: center;
     font-family: "julee";
-    box-sizing: border-box;
     
 }
 
 .joinContainer > input {
-    height: 5vh;
+    height: 7vh;
     width: 20vw;
     border-radius: 5px;
 }
@@ -38,27 +37,25 @@
     width: 30vmax;
     outline: none;
     border: none;
-    margin: 2vmax;
+    margin: 0.5vmax;
     font-size: 1.2vmax;
-    box-sizing: border-box;
+    
 }
 
-.joinBtn{
-    height: 2rem;
-    width: 20vw;
+button{
+    height: 7vh;
+    width: 30vw;
     border-radius: 5px;
-    margin-top: 7px;
     border: none;
     margin: 2vmax;
     font-size: 1.2vmax;
-    box-sizing: border-box;
     background-color: teal;
     color: aliceblue;
     font-family:"julee";
     font-size: x-large;
 }
 
-.joinBtn:hover{
+button:hover{
     background-color: rgb(2, 59, 59);
     transition: all 0.2s ;
     cursor:pointer;

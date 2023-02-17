@@ -9,21 +9,21 @@
 
 .chatContainer{
     background-color: aliceblue;
-    height: 60%;
-    width: 50%;   
+    height: 80%;
+    width: 35%;   
 }
 .chatHeader{
     background-color: teal;
+    border-bottom: 2.3px solid rgba(0, 0, 0, 0.417);
     height: 15%;
 }
 .chatBox{
-    border: 0.2vmax solid black;
     height: 70%;
     border:none;
     box-sizing: border-box;
 }
 .inputBox{
-    border: 0.2vmax solid black;
+    border-top:  0.2vmax solid rgba(0, 0, 0, 0.426);
     height: 15%;
     box-sizing: border-box;
     display: flex;
@@ -45,8 +45,12 @@
     color: white;
     border: none;
     width: 21%;
+    height: 100%;
+    margin-right: 0%;
+    margin-top: 0%;
     transition: all 0.2s;
     cursor: pointer;
+    
 }
 
 .sendBtn > img {
@@ -61,3 +65,17 @@
 .sendBtn:hover img{
     transform: translateX(10px);
 } 
+#image1{
+    width: 20%;
+    height: 100%;
+}
+
+#image2{
+    float: right;
+    margin-top: 3%;
+    margin-right: 2%;
+    transition: 0.3s;
+}
+#image2:hover{
+    transform: scale(1.2);
+}

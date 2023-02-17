@@ -21,7 +21,7 @@ const Join = () => {
             <img src={logo} alt='logo'/>
             <h1>my-chat</h1>
          <input onChange={(e) => setName(e.target.value)} placeholder="Enter Your Name" type="text" id="joinInput" />
-                <Link onClick={(event) => !name ? event.preventDefault() : null} to="/chat">  <button onClick={sendUser} className="joinbtn">Log In</button></Link>
+                <Link onClick={(event) => !name ? event.preventDefault() : null} to="/chat">  <button onClick={sendUser} id="joinbtn">Log In</button></Link>
            
         </div>
     </div>

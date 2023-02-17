@@ -3,10 +3,11 @@ import {user} from "../join/Join";
 import socketIo from "socket.io-client";
 import "./Chat.css";
 import sendImg from "../../assets/send.png";
-import Message from "../../component/message/Message"
+import Message from "../message/Message"
 import  ReactScrollToBottom  from "react-scroll-to-bottom"
-
-
+import img1 from "../../assets/logo.png"
+import close from "../../assets/close.png"
+import { useNavigate } from 'react-router-dom';
 
 
 
@@ -16,6 +17,8 @@ const ENDPOINT = "http://localhost:8081/";
 const Chat = () => {
   const [id, setId] = useState("");
   const [messages , setMessages]= useState([])
+  const navigator  = useNavigate();
+
 
 
   const send = ()=>{
@@ -24,11 +27,15 @@ const Chat = () => {
     document.getElementById("chatInput").value ="";
   }
 
+  const closeButton =()=>{
+    navigator("/");
+  }
+
   console.log(messages)
   useEffect(() => {
       socket = socketIo(ENDPOINT, { transports: ['websocket'] });
      socket.on('connect', () => {
-            alert('Connected');
+            // alert('Connected');
             setId(socket.id);
         })
         console.log(socket);
@@ -50,7 +57,7 @@ const Chat = () => {
         })
 
      return () => {
-      socket.emit("disconnect");
+      socket.emit("disconnected");
       socket.off();
      }
    }, [])
@@ -70,14 +77,17 @@ const Chat = () => {
   return (
     <div className='chatPage'>
         <div className='chatContainer'>
-            <div className='chatHeader'></div>
+            <div className='chatHeader'>
+              <img src={img1 } alt="closeIcon" id='image1' />
+              <img src={close } alt="closeIcon" id='image2' onClick={closeButton} />
+            </div>
             <ReactScrollToBottom className='chatBox'>
               {
-                messages.map((item , i)=><Message user={item.id===id ? "" :item.user} message={item.message} clas={item.id===id? "right":"left"}/>)
+                messages.map((item , i)=><Message user={item.id===id ? "" :item.user} message={item.message} classs={item.id===id? "left":"right"}/>)
               }
             </ReactScrollToBottom>
             <div className='inputBox'>
-                <input type="text" id='chatInput'/>
+                <input onKeyPress={(event)=>event.key==="Enter"?send():null} type="text" id='chatInput'/>
                 <button className='sendBtn' onClick={send}  ><img src={sendImg} alt='send' /></button>
             </div>
         </div>

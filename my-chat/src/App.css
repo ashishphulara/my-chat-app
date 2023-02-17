@@ -1,3 +1,118 @@
 body {
     margin: 0;
 }
+
+@media (max-aspect-ratio:7/10) {
+    .joinContainer{
+       width: 100% !important;
+      
+    }
+    .joinContainer > img{
+        width : 30vmax  !important;
+        height: 18vmax;
+    }
+    
+    .joinContainer > h1{
+        color: aliceblue;
+        font-size: 4vmax !important;
+        width: 30vmax !important;
+        border-bottom: 0.2vmax solid white;
+        text-align: center;
+        font-family: "julee";
+        
+    }
+    .joinContainer > input {
+        height: 7vh;
+        width: 30vw;
+        border-radius: 5px;
+    }
+    
+#joinInput{
+    width: 30vmax;
+    outline: none;
+    border: none;
+    margin: 0.5vmax;
+    font-size: 3vmax !important;
+    
+}
+button{
+    height: 7vh;
+    width: 44vw !important;
+    border: none;
+    margin: 2vmax;
+    font-size: 4vmax !important;
+    background-color: teal;
+    color: aliceblue;
+    font-family:"julee";
+    font-size: x-large;
+}
+
+.chatContainer{
+    background-color: aliceblue;
+    height: 80% !important;
+    width: 70% !important;   
+}
+#image1{
+    width: 35% !important;
+    height: 100%;
+}
+
+.sendBtn{
+    background-color: teal;
+    color: white;
+    margin-right:0.1%;
+    margin-top: -0.1%;
+    border: none;
+    height: 100%;
+    width: 40% !important;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+#chatInput{
+    width:81%;
+    border: none;
+    padding: 1vmax;
+    background-color: aliceblue;
+    outline: none;
+    font-size: 3vmax !important;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.messageBox{
+    background-color: rgb(152, 195, 195);
+    width: 70% !important;
+    height: 12% !important;
+    padding: 0.9vmax;
+    margin: 1.2vmax;
+    border-radius: 0.7vmax;
+    display: inline-block;
+    clear: both;
+}
+#image2:hover{
+    transform: scale(1.8) !important;
+}
+
+}
+
+@media (max-aspect-ratio: 5/10){
+    button{
+        height: 7vh;
+        width: 61vw !important;
+        border: none;
+        margin: 2vmax;
+        font-size: 4vmax !important;
+        background-color: teal;
+        color: aliceblue;
+        font-family:"julee";
+        font-size: x-large;
+    }
+    #image2{
+        float: right;
+        margin-top: 3%;
+        margin-right: 2%;
+        transition: 0.3s !important;
+    }
+    #image2:hover{
+        transform: scale(1.5) !important;
+    }
+}
